@@ -12,3 +12,4 @@ Repository containing useful parts for 3D modeling with OpenSCAD.
 ![nut](./images/nut.png)
 ![screw](./images/screw.png)
 ![tnut](./images/t_nut.png)
+![anglebracket](./images/anglebracket.png)
