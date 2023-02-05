@@ -9,3 +9,4 @@ Repository containing useful parts in 3D modeling
 ![servo](./images/servo.png "servo")
 ![nut](./images/nut.png)
 ![screw](./images/screw.png)
+![tnut](./images/t_nut.png)
