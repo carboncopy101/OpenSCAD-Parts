@@ -1,6 +1,6 @@
-height = 10;
+//height = 10;
 
-module al_extrusion(){
+module al_extrusion(height){
     render()difference(){
             
         translate([0,0,height/2])cube([20,20,height], center = true);
@@ -21,4 +21,4 @@ module al_extrusion(){
     }
 }
 
-al_extrusion();
+al_extrusion(10);
