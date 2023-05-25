@@ -72,17 +72,40 @@ module squarejunction_red(){
         union()minkowski(){
     //PCB outline
             
-            cube([100-3,100-3,44+2]); 
+            cube([121-3,121-3,57]); 
             cylinder(r=3, h=1); 
         }
         
-        translate([1.75,1.75,5])cube([100-5,100-5,44+2]);
+        translate([1.75,1.75,3])cube([121-5,121-5,57]);
+        
+       
     }
+    translate([3,3,0])cylinder(h=58, r=3);
+    translate([117,3,0])cylinder(h=58, r=3);
+       
+    translate([3,117,0])cylinder(h=58, r=3);
+    translate([117,117,0])cylinder(h=58, r=3);
     
+}
+
+module arc_cutout(){
+    render()difference(){
+        
+        cube([203.2,127,76.2]); 
+        translate([0.6,0.6,1.2])cube([203.2-1.2,127-1.2,76.2-1.2]); 
+        
+       
+    }
 }
 
 //translate([6,10,1.5])rpi_4();
 //color("red")ftype();
 
-color("red")squarejunction();
+//color("red")squarejunction();
+//translate([6,10,5])rpi_4();
+
+//color("red")squarejunction_red();
+//translate([6,10,5])rpi_4();
+
+color("red")arc_cutout();
 translate([6,10,5])rpi_4();
