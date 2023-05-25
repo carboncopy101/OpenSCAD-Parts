@@ -34,12 +34,55 @@ module rpi_4(){
 module ftype(){
     translate([3,3,0])minkowski(){
 //PCB outline
-
-        cube([100-6,68-6,49]); 
-        cylinder(r=3, h=1); 
+        render()difference(){
+            cube([115-6,90-6,54]); 
+            translate([0.125,.125,1.5])cube([115-6.25,90-6.25,54]); 
+            }
+        
+        cylinder(r=2, h=1); 
        }
+       
+       translate([6,6,0])cylinder(h=55, r=3);
+       translate([109,6,0])cylinder(h=55, r=3);
+       
+       translate([6,83,0])cylinder(h=55, r=3);
+       translate([109,83,0])cylinder(h=55, r=3);
+      
     
 }
 
-translate([0,0,80])rpi_4();
-ftype();
+module squarejunction(){
+    
+    render()difference(){
+        union()minkowski(){
+    //PCB outline
+            
+            cube([100-3,100-3,44+2]); 
+            cylinder(r=3, h=1); 
+        }
+        
+        translate([1.75,1.75,5])cube([100-5,100-5,44+2]);
+    }
+    
+}
+
+module squarejunction_red(){
+    
+    render()difference(){
+        union()minkowski(){
+    //PCB outline
+            
+            cube([100-3,100-3,44+2]); 
+            cylinder(r=3, h=1); 
+        }
+        
+        translate([1.75,1.75,5])cube([100-5,100-5,44+2]);
+    }
+    
+}
+
+//translate([6,10,1.5])rpi_4();
+//color("red")ftype();
+
+color("red")squarejunction();
+translate([6,10,5])rpi_4();
