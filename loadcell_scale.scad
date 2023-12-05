@@ -18,7 +18,10 @@ module loadcell_scale_base(){
     
         color("red")translate([5,6-2,0])cylinder(r=2.5, h=12);
         color("red")translate([15,6-2,0])cylinder(r=2.5, h=12);
-        
+        hull(){
+        color("red")translate([5,6-2,0])cylinder(r=4, h=4);
+        color("red")translate([15,6-2,0])cylinder(r=4, h=4);
+        }
     
     }   
 }
@@ -34,9 +37,13 @@ module load_scale_bed(){
         }
         color("red")translate([-5,0,0])cylinder(r=2.5, h=12, center=true);
         color("red")translate([5,0,0])cylinder(r=2.5, h=12, center=true);
+        hull(){
+        color("red")translate([-5,0,0])cylinder(r=5, h=5, center=true);
+        color("red")translate([5,0,0])cylinder(r=5, h=5, center=true);
+        }
         }
     }
 
-loadcell_scale_base();
+//loadcell_scale_base();
 translate([10+75-20,4,15+12])load_scale_bed();
 
